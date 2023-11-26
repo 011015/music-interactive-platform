@@ -1,0 +1,43 @@
+.defaultButton {
+    font: 14px "微软雅黑", Arial, Helvetica, sans-serif;
+    padding: 0.1em 0.7em;
+    background-color: #fff;
+    border: 1px solid #e3873e;
+    border-radius: 1.2em;
+    color: #e3873e;
+    cursor: pointer;
+}
+
+.defaultButtonActive, .defaultButton:hover {
+    background-color: #e3873e;
+    color: #fff;
+}
+
+.navButton {
+    color: #C9C9DD;
+    font-size: 16px;
+    padding: 1em 0.8em;
+    text-align: center;
+    background-color: #2C2120;
+}
+
+.navButtonActive, .navButton:hover {
+    color: #EBC26E;
+    background-color: #3d3433;
+    cursor: pointer;
+}
+
+.upNavButton {
+    color: #3d3433;
+    font-size: 16px;
+    padding: 1.2em;
+    text-align: center;
+    border: 0px;
+    background-color: white;
+}
+
+.upNavButtonActive, .upNavButton:hover {
+    color: #EBC26E;
+    background-color: #3d3433;
+    cursor: pointer;
+}

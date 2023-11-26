@@ -1,0 +1,22 @@
+.leftNavContainer {
+    position: fixed;
+    left: 0;
+    top: 50vh;
+    transform: translate(0, -50%);
+    display: flex;
+    flex-direction: column;
+}
+.upNavContainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 6em;
+    border-bottom: 2px solid #CDCDCD;
+    .left {
+        display: flex;
+        background-color: pink;
+    }
+    .right {
+        display: flex;
+        background-color: red;
+    }
+}

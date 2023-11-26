@@ -1,0 +1,140 @@
+.searchBlock {
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 #9a9696;
+    width: 750px;
+    .content {
+        height: 30.6px;
+        overflow: hidden;
+    }
+    .contentExpanded {
+        height: auto;
+    }
+    .icon {
+        height: 24px;
+        text-align: center;
+    }
+    .icon_arrow {
+        width: 24px;
+        height: 24px;
+        background-color: #F1F3F4;
+        border-radius: 50%;
+        /*设置所有动画的效果：0.3s 淡出效果*/
+        transition: all .3s ease-out;
+        cursor: pointer;
+        &:hover {
+            background-color: #d5d8d8;
+        }
+    }
+    .icon_arrow_rotate {
+        /*旋转180度*/
+        transform: rotate(180deg);
+    }
+}
+
+.rowBlock {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    column-gap: 20px;
+    row-gap: 20px;
+    padding: 20px 0;
+}
+
+.columnSingle {
+    // width: 285px;
+    box-shadow: 0 0 10px 0 #9a9696;
+    background-color: #FFFFFF;
+    .shroud {
+        display: block;
+        position: relative;
+        height: 250px;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+        &:hover {
+            .zoom {
+                margin-left: -10%;
+                margin-top: -10%;
+                width: 120%;
+                height: 120%;
+            }
+            .touch {
+                opacity: 1;
+            }
+        }
+    }
+    .content {
+        margin: 2px 0 2px 8px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden; 
+    }
+    .content.add {
+        font-size: small;
+        color: grey;
+    }
+    .touch {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        opacity: 0;
+        background: rgba(0, 0, 0, 0.2) url("/image/view.png") no-repeat center;
+        background-size: 34px 34px;
+        cursor: pointer;
+    }
+}
+
+.columnBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 25px;
+    padding: 25px 0;
+}
+
+.rowSingle {
+    display: flex;
+    justify-content: center;
+    .cover {
+        width: 250px;
+        height: 250px;
+        border-radius: 25px;
+        overflow: hidden;
+        box-shadow: 0 0 10px 0 #9a9696;
+        background-color: #fff;
+        > img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .content {
+        width: 250px;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 10px;
+        padding: 0 20px;
+        h1 {
+            margin: 0;
+            font-weight: normal;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        h5 {
+            margin: 0;
+            font-weight: normal;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        .button {
+            display: flex;
+            column-gap: 5px;
+        }
+    }
+}

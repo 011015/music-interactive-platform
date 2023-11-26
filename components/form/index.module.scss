@@ -1,0 +1,46 @@
+.form {
+    background: rgba(254, 225, 159, 0.6);
+    padding: 0.25em;
+    text-align: center;
+    width: 60vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .formTitle {
+        margin: 0;
+        padding: 0.5em 0;
+        border-bottom: 1px solid #b09a63;
+        margin-bottom: 0.25em;
+    }
+    .formItem {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 16px;
+        padding: 0.5em 0.25em;
+        .itemTitle {
+            height: 1.475em;
+            line-height: 1.475em;
+            text-align: right;
+            padding-right: 0.5em;
+            flex: 1 1 45%;
+            .required {
+                color: red;
+            }
+        }
+        .itemData {
+            height: 1.475em;
+            line-height: 1.475em;
+            text-align: left;
+            padding-left: 0.5em;
+            flex: 1 1 55%;
+            input {
+                vertical-align: top;
+            }
+        }
+    }
+    button {
+        margin: 0 0.25em;
+    }
+}
