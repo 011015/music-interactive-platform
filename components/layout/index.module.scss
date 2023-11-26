@@ -1,6 +1,11 @@
-.cover {
+.loginCover {
     width: 100vw;
     height: 100vh;
-    background: url("/image/background.png") no-repeat center;
+    background: url("/image/background1.png") no-repeat center;
     background-size: 100% 100%;
+}
+.rootCover {
+    background-image: url("/image/background2.png");
+    background-size: 650px 650px;
+    background-color: #F6F6F6;
 }

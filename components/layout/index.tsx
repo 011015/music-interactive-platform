@@ -1,9 +1,15 @@
-import { UpNav, LeftNav } from "../nav"
+import type { ReactNode } from "react"
+import { UpNav, LeftNav } from "@/components/nav"
 import styles from "./index.module.scss"
-function RootLayout({ children, activeIndex }: any) {
+
+interface LayoutProps {
+    activeIndex: number;
+    children: ReactNode;
+}
+function RootLayout({ children, activeIndex }: LayoutProps) {
     return (
-        <>
-            <UpNav left={{
+        <div className={styles.rootCover}>
+            <UpNav style={{backgroundColor: "white"}} left={{
                 activeBtn: true,
                 activeIndex,
                 list: [
@@ -17,13 +23,13 @@ function RootLayout({ children, activeIndex }: any) {
                 ]
             }} />
             { children }
-        </>
+        </div>
     )
 }
 
-function LoginLayout({ children, activeIndex }: any) {
+function LoginLayout({ children, activeIndex }: LayoutProps) {
     return (
-        <div className={styles.cover}>
+        <div className={styles.loginCover}>
             <LeftNav 
                 activeIndex={ activeIndex } 
                 nameList={[

@@ -1,4 +1,4 @@
-import { useState } from "react"
+import React, { useState } from "react"
 import Link from "next/link"
 import Button from "../button"
 import styles from "./index.module.scss"
@@ -27,8 +27,22 @@ function LeftNav(props: any) {
     )
 }
 
-function UpNav(props: any) {
-    const { left, right } = props;
+interface UpNavItem {
+    activeBtn?: boolean;
+    activeIndex?: number;
+    list: Array<object>;
+}
+
+interface UpNavProps extends React.HTMLAttributes<HTMLElement> {
+    left?: UpNavItem;
+    right?: UpNavItem;
+}
+
+function UpNav(upNavProps: UpNavProps) {
+    const { left, right, className, ...props } = upNavProps;
+    const clsName = className ? 
+    `${styles.upNavContainer} ${className}` : 
+    `${styles.upNavContainer}`;
     let getLeft = (index: number) => ({}), getRight = (index: number) => ({}); 
     if (left?.activeBtn) {
         const [ leftActive, setLeftActive ] = useState(new Array(left.list.length)
@@ -63,9 +77,9 @@ function UpNav(props: any) {
     }
 
     return (
-        <div className={styles.upNavContainer}>
+        <div {...{...props, className: clsName}}>
             <ul className={styles.left}>
-                {left.list.map((e: any, index: number) => 
+                {left?.list.map((e: any, index: number) => 
                     <li key={index}>
                         <Link href={e.url}>
                             <Button type="upNav" {...getLeft(index)}>
@@ -76,7 +90,7 @@ function UpNav(props: any) {
                 )}
             </ul>
             <ul className={styles.right}>
-                {right.list.map((e: any, index: number) => 
+                {right?.list.map((e: any, index: number) => 
                     <li key={index}>
                         <Link href={e.url}>
                             <Button type="upNav" {...getRight(index)}>

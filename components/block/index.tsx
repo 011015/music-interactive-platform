@@ -98,10 +98,60 @@ function SearchBlock(blockProps: React.HTMLAttributes<HTMLElement>) {
     )
 }
 
+function ProfileBlock() {
+    return (
+        <div className={styles.profileContainer}>
+            <div className={styles.profile}>
+                <Image src="/image/avatar1.jpg" alt="头像" width={120} height={120} priority />
+                <span className={styles.profileName}>用户名称</span>
+            </div>
+            <div className={styles.selectBlock1}>
+                <span className={styles.selectHeader1}>我的通知</span>
+            </div>
+        </div>
+    )
+}
+
+function CommentSingle() {
+    return (
+        <div className={styles.commentSingle}>
+            <div className={styles.commentUser}>
+                <div className={styles.commentUserAvatar}>
+                    <Image src="/image/avatar1.jpg" alt="头像" width={40} height={40} priority />
+                </div>
+                <div className={styles.commentUserInfo}>
+                    <p>
+                        <span className={styles.commentUsername}>
+                            用户名称
+                        </span>
+                        <span className={styles.commentDate}>
+                            回复
+                        </span>
+                        <span className={styles.commentUsername}>
+                            用户名称
+                        </span>
+                    </p>
+                    <p className={styles.commentDate}>日期</p>
+                </div>
+            </div>
+            <p className={styles.commentContent}>
+                评论内容
+            </p>
+            <div className={styles.button}>
+                <Button>删除</Button>
+                <Button>回复</Button>
+                <Button>举报</Button>
+            </div>
+        </div>
+    )
+}
+
 export {
     SearchBlock,
     RowBlock,
     ColumnBlock,
+    ProfileBlock,
     RowSingle,
-    ColumnSingle
+    ColumnSingle,
+    CommentSingle
 }

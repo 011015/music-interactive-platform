@@ -30,8 +30,6 @@ div.file {
         top: 0;
         left: 0;
         opacity: 0;
-        cursor: pointer;
-        font-size: 0;
     }
 }
 
@@ -150,4 +148,120 @@ label.checkboxLabel.checkboxAnim .checkbox {
 
 .dropdownLabel {
     margin-right: 0.5em;
+}
+
+.textarea {
+    width: 796px;
+    height: 140px;
+    .container {
+        width: 796px;
+        height: 140px;
+        border: 1px solid #ccc;
+        transition: border linear .2s, box-shadow linear .5s;
+        -moz-transition: border linear .2s, -moz-box-shadow linear .5s;
+        -webkit-transition: border linear .2s, -webkit-box-shadow linear .5s;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        background-color: #fff;
+        position: absolute;
+        -moz-box-shadow: 0 0 5px #ccc;
+        -webkit-box-shadow: 0 0 5px #ccc;
+        box-shadow: 0 0 5px #ccc;
+        .text {
+            width: 100%;
+            height: 102px;
+            padding: 5px;
+            box-sizing: border-box;
+            outline: none;
+            border: 0px solid #fff;
+            resize: none;
+            font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+        .faceDiv {
+            height: 102px;
+            border-top: 1px solid #ccc;
+            position: absolute;
+            background-color: #fff;
+            -moz-border-radius: 5px 5px 0 0;
+            -webkit-border-radius: 5px 5px 0 0;
+            border-radius: 5px 5px 0 0;
+            > img {
+                border: 1px solid #ccc;
+                float: left;
+                margin-left: -1px;
+                margin-top: -1px;
+                position: relative;
+                width: 24px;
+                height: 24px;
+                padding: 3px 3px 3px 3px;
+                cursor: pointer;
+                &:hover {
+                    background-color: #efefef;
+                }
+                &:active {
+                    padding: 4px 3px 2px 3px;
+                }
+            }
+        }
+        .foot {
+            width: 100%;
+            border-top: 1px solid #ccc;
+            background-color: #fff;
+            -moz-border-radius: 0 0 5px 5px;
+            -webkit-border-radius: 0 0 5px 5px;
+            border-radius: 0 0 5px 5px;
+            position: absolute;
+            .imgBtn {
+                float: left;
+                margin-top: 8px;
+                margin-left: 10px;
+                background-image: url("/image/imgs.png");
+                background-repeat: no-repeat;
+                background-position: 0 -13px;
+                height: 18px;
+                width: 20px;
+                cursor: pointer;
+                &:active {
+                    margin-top: 9px;
+                }
+                &:hover {
+                    background-position: 0 -31px;
+                }
+            }
+            .postBtn {
+                background: none;
+                outline: none;
+                border: none;
+                float: right;
+                font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+                color: #808080;
+                padding: 7px 20px;
+                border-left: 1px solid #ccc;
+                cursor: pointer;
+                -moz-border-radius: 0 0 5px 0;
+                -webkit-border-radius: 0 0 5px 0;
+                border-radius: 0 0 5px 0;
+                &:hover {
+                    color: #333;
+                    background-color: #efefef;
+                }
+                &:active {
+                    padding: 10px 20px 6px 20px;
+                }
+            }
+            .tips {
+                float: right;
+                font: 13px "微软雅黑", Arial, Helvetica, sans-serif;
+                color: #808080;
+                padding: 7px 20px;
+                -moz-border-radius: 0 0 5px 0;
+                -webkit-border-radius: 0 0 5px 0;
+                border-radius: 0 0 5px 0;
+            }
+        }
+    }
 }

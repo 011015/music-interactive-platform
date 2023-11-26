@@ -7,7 +7,7 @@ import styles from "./index.module.scss"
 
 const { Select } = Input;
 
-function SearchForm() {
+function SearchForm(props: any) {
     const onFinish = (e: any, data: any) => {
         const url = "/api/songTypes/search";
         const options = {
@@ -25,7 +25,7 @@ function SearchForm() {
         console.log(data);
     }
     return (
-        <Form className={styles.form} noStyle={true} name={'userLogin'} onFinish={onFinish}>
+        <Form className={styles.form} {...props}>
             <Form.Item className={styles.formItem} name={"收藏数"}>
                 <label>收藏数: </label>
                 <Select>
@@ -52,9 +52,8 @@ function SearchForm() {
 }
 
 function LoginForm(props: any) {
-    const { titleName, name, onFinish } = props;
     return (
-        <Form titleName={titleName} name={name} onFinish={onFinish}>
+        <Form {...props}>
             <Form.Item label={"名称"} name={"name"} required={true}>
                 <Input.Text />
             </Form.Item>
@@ -77,7 +76,26 @@ function LoginForm(props: any) {
     )
 }
 
+function UploadForm() {
+    return (
+        <Form noStyle={true}>
+            <Form.Item>
+                <Input.File accept="image/*" multiple={true} />
+            </Form.Item>
+            <Form.Item>
+                <Select>
+                    <Select.CheckboxItem label={"允许下载"} name={"权限"} value={"下载"} />
+                </Select>
+            </Form.Item>
+            <Form.Item>
+                <Button>上传</Button>
+            </Form.Item>
+        </Form>
+    )
+}
+
 export {
     SearchForm,
-    LoginForm
+    LoginForm,
+    UploadForm
 }

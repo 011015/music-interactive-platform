@@ -1,4 +1,5 @@
 import { useState } from "react"
+import type { ReactElement } from "react"
 import { RootLayout } from "@/components/layout"
 import { ColumnBlock } from "@/components/block"
 import { SearchForm } from "@/components/myForm"
@@ -85,7 +86,7 @@ function Songs() {
     )
 }
 
-Songs.getLayout = function getLayout(page: any) {
+Songs.getLayout = function getLayout(page: ReactElement) {
     return (
         <RootLayout activeIndex={1}>
             {page}

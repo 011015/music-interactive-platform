@@ -58,10 +58,24 @@ function File(fileProps: TextProps) {
             选择文件
             <input 
                 type="file" 
-                accept="image/*" 
-                multiple={true} 
-                {...props} 
+                {...props}
             />
+        </div>
+    )
+}
+
+function Textarea() {
+    return (
+        <div className={styles.textarea}>
+            <div className={styles.container}>
+                <textarea className={styles.text} placeholder='评论内容' maxLength={500} />
+                <div className={styles.faceDiv}></div>
+                <div className={styles.foot}>
+                    <a className={styles.imgBtn} href="javascript:void(0);"></a>
+                    <button type="button" className={styles.postBtn}>发表评论</button>
+                    <div className={styles.tips}>还可以输入<span className={styles.tipsWord}>500</span>字符</div>
+                </div>
+            </div>
         </div>
     )
 }
@@ -164,5 +178,6 @@ export default {
     Text,
     Password,
     File,
+    Textarea,
     Select,
 }

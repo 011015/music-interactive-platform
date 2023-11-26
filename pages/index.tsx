@@ -2,6 +2,7 @@ import { SearchBlock, RowBlock } from "@/components/block"
 import { RootLayout } from "@/components/layout"
 import Input from "@/components/input"
 import { SearchForm } from "@/components/myForm"
+import { ReturnTop } from "@/components/nav"
 
 import styles from "./index.module.scss"
 
@@ -29,7 +30,7 @@ const songs = [
         collectNumber: 2
     },
     {
-        id: 3,
+        id: 3, 
         url: "/image/cover1.jpg", 
         name: "稻香", 
         singer: "周杰伦", 
@@ -101,6 +102,7 @@ Root.getLayout = function getLayout(page: any) {
     return (
         <RootLayout activeIndex={0}>
             {page}
+            <ReturnTop />
         </RootLayout>
     )
 }

@@ -138,3 +138,91 @@
         }
     }
 }
+
+.commentSingle {
+    border-top: 1px solid #CDCDCD;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    padding: 5px;
+    p {
+        margin: 0;
+    }
+    .commentUser {
+        display: flex;
+        height: 40px;
+        column-gap: 5px;
+        .commentUserAvatar {
+            > img {
+                border-radius: 50%;
+                border: 4px solid #EBC26E;
+                box-sizing: border-box;
+            }
+        }
+        .commentUserInfo {
+            display: flex;
+            flex-direction: column;
+            > p {
+                display: flex;
+                column-gap: 5px;
+            }
+            .commentDate {
+                font-size: 14px;
+                color: #767575;
+            }
+        }
+    }
+    .commentContent {
+        line-height: 24px;
+        > img {
+            width: 24px;
+            height: 24px;
+            vertical-align: bottom;  
+        }
+    }
+    .button {
+        display: flex;
+        column-gap: 5px;
+    }
+}
+
+.profileContainer {
+    height: 400px;
+    width: 100%;
+    background: url("/image/background3.jpg") no-repeat center;
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    .profile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+        width: 100%;
+        height: 90%;
+        > img {
+            height: 120px;
+            width: 120px;
+            border-radius: 50%;
+            border: 4px solid #EBC26E;
+            box-sizing: border-box;
+        }
+        .profileName {
+            font: 20px "微软雅黑", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            padding: 5px;
+            background: rgba(254, 225, 159, 0.5);
+        }
+    }
+    .selectBlock1 {
+        height: 10%;
+        background: rgba(254, 225, 159, 0.5);
+        .selectHeader1 {
+            font: 17px "微软雅黑", Arial, Helvetica, sans-serif;
+            padding: 5px;
+            color: black;
+            line-height: 10%;
+        }
+    }
+}
