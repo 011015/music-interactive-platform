@@ -1,7 +1,5 @@
 export default function handler(req: any, res: any) {
-    console.log(req);
     const { pid } = req.query;
-    console.log(pid);
     res.status(200).json({
         id: `${pid}`,
         url: "/image/cover1.jpg", 

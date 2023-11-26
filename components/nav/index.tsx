@@ -90,4 +90,16 @@ function UpNav(props: any) {
     )
 }
 
-export { LeftNav, UpNav }
+function ReturnTop() {
+    return (
+        <>
+            <div className={styles.returnTop}>
+                <Link href="#top">
+                    <Button type="upNav">返回顶部</Button>
+                </Link>
+            </div>
+        </>
+    )
+}
+
+export { LeftNav, UpNav, ReturnTop }

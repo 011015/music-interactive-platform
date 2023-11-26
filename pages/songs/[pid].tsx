@@ -1,5 +1,5 @@
-import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import Image from "next/image"
 
 import { RootLayout } from "@/components/layout"
@@ -7,6 +7,7 @@ import Form from "@/components/form"
 import Button from "@/components/button"
 import { RowSingle } from "@/components/block"
 import Input from "@/components/input"
+import { ReturnTop } from "@/components/nav"
 
 import styles from "./index.module.scss"
 
@@ -64,6 +65,7 @@ Song.getLayout = function getLayout(page: any) {
     return (
         <RootLayout activeIndex={1}>
             {page}
+            <ReturnTop />
         </RootLayout>
     )
 }

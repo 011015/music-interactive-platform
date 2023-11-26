@@ -13,10 +13,12 @@
     border-bottom: 2px solid #CDCDCD;
     .left {
         display: flex;
-        background-color: pink;
     }
     .right {
         display: flex;
-        background-color: red;
     }
+}
+.returnTop {
+    position: fixed; 
+    top: 70%;
 }
